@@ -19,16 +19,16 @@ const projects = [
             "Responsive design for all devices"
         ],
           images: [
-            "/images/admin-db.png",
-            "/images/admin-db2.png",
-            "/images/admin-db3.png",
-            "/images/admin-db4.png",
-            "/images/admin-db5.png",
-            "/images/user-db.png",
-            "/images/user-db2.png",
-            "/images/user-db3.png"
+            "images/admin-db.png",
+            "images/admin-db2.png",
+            "images/admin-db3.png",
+            "images/admin-db4.png",
+            "images/admin-db5.png",
+            "images/user-db.png",
+            "images/user-db2.png",
+            "images/user-db3.png"
         ],
-        thumbnail: "/images/admin-db.png",  // This is REQUIRED for the gallery
+        thumbnail: "images/admin-db.png",  // This is REQUIRED for the gallery
         github: "https://github.com/yourusername/waltermart-portal",
         demo: "https://your-demo-link.com",
         is3D: false
@@ -48,11 +48,11 @@ const projects = [
             "Mobile support"
         ],
         images: [
-            "/images/pv1.jpg",
-            "/images/pv2.jpg",
-            "/images/pv3.jpg"
+            "images/pv1.jpg",
+            "images/pv2.jpg",
+            "images/pv3.jpg"
         ],
-        thumbnail: "/images/pv3.jpg",
+        thumbnail: "images/pv3.jpg",
         github: "https://github.com",
         demo: "https://example.com",
         is3D: true
@@ -584,3 +584,4 @@ document.addEventListener('DOMContentLoaded', () => {
 window.closeImageModal = closeImageModal;
 window.closeProjectModal = closeProjectModal;
 window.closeCubeModal = closeCubeModal;
+

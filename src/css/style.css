@@ -321,14 +321,14 @@ body {
     height: 100vh;
     position: relative;
     background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%),
-                url('https://via.placeholder.com/1920x1080') center/cover;
+                url('/images/pv1.jpg') center/cover;
     background-attachment: fixed;
     overflow: hidden;
 }
 
 [data-theme="light"] .hero-section {
     background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%),
-                url('https://via.placeholder.com/1920x1080') center/cover;
+                url('/images/pv1.jpg') center/cover;
 }
 
 .hero-overlay {
@@ -1099,3 +1099,4 @@ body {
         flex-direction: column;
     }
 }
+
