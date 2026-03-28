@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Josh - Portfolio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Custom CSS - UPDATED PATH -->
+<link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="bg-canvas" class="three-canvas"></canvas>
+    
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-film"></i> JJR
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">Josh Developer</h1>
+                    <p class="hero-subtitle">Junior Web Developer & 3D Enthusiast</p>
+                    <p class="hero-description">
+                        Creating immersive digital experiences with code and 3D animations.
+                        Specializing in modern web applications and interactive designs.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary btn-lg me-3">View Gallery</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Explore my creative work and sample screenshots</p>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+            </div>
+            
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Projects will be dynamically loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with 3D Cards -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">Tools and technologies I work with</p>
+            
+            <div class="skills-grid" id="skills-grid">
+                <div class="skill-card" data-tilt>
+                    <i class="fab fa-react"></i>
+                    <h4>React.js</h4>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <i class="fab fa-node-js"></i>
+                    <h4>Node.js</h4>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <i class="fab fa-python"></i>
+                    <h4>Python</h4>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <i class="fas fa-database"></i>
+                    <h4>PostgreSQL</h4>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <i class="fab fa-js"></i>
+                    <h4>JavaScript</h4>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <i class="fab fa-bootstrap"></i>
+                    <h4>Bootstrap</h4>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <i class="fab fa-git-alt"></i>
+                    <h4>Git/GitHub</h4>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <i class="fas fa-cloud"></i>
+                    <h4>AWS</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's work together on your next project</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="contact-form" class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </div>
+                    </form>
+                    
+                    <div class="social-links mt-5 text-center">
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Josh Developer. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Image Modal for Full Screen View -->
+    <div id="image-modal" class="modal-gallery">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeImageModal()">&times;</span>
+            <img id="modal-image" class="modal-image" src="" alt="Project Preview">
+        </div>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="modal-gallery">
+        <div class="project-modal-content">
+            <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+            <div class="project-modal-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!-- Project Image Gallery -->
+                        <div class="project-gallery-container">
+                            <div class="project-main-image">
+                                <img id="project-main-image" src="" alt="Project Main Image">
+                            </div>
+                            <div class="project-thumbnails" id="project-thumbnails">
+                                <!-- Thumbnails will be dynamically added -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- Project Details -->
+                        <div class="project-details">
+                            <h2 id="project-title" class="project-detail-title"></h2>
+                            <div class="project-tech-stack" id="project-tech-stack"></div>
+                            <div class="project-description-full">
+                                <h4>Project Description</h4>
+                                <p id="project-description"></p>
+                            </div>
+                            <div class="project-features">
+                                <h4>Key Features</h4>
+                                <ul id="project-features"></ul>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" id="project-github" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                                <a href="#" id="project-demo" target="_blank" class="btn btn-outline-light">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Cube Modal -->
+    <div id="cube-modal" class="modal-gallery">
+        <div class="modal-content" style="background: transparent;">
+            <span class="modal-close" onclick="closeCubeModal()">&times;</span>
+            <canvas id="cube-canvas" class="cube-canvas"></canvas>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+        }
+    }
+    </script>
+    <script type="module" src="src/js/three.js"></script>
+    <<script type="module" src="src/js/main.js"></script>
+</body>
+</html>
